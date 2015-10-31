@@ -19,6 +19,13 @@
                 "type": "button"
             }
         },
+        "actionEventListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "addContent",
+                "handler": {"@": "rangeController"}
+            }
+        },
         "button": {
             "prototype": "montage/ui/button.reel",
             "properties": {
@@ -35,7 +42,7 @@
             "listeners": [
                 {
                     "type": "action",
-                    "listener": {"@": "rangeController"}
+                    "listener": {"@": "actionEventListener"}
                 }
             ]
         },
